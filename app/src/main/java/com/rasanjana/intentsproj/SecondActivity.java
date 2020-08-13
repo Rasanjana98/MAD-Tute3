@@ -17,6 +17,7 @@ public class SecondActivity extends AppCompatActivity {
     Button btnAdd,btnSub,btnMulti,btnDevi;
     float result;
     int num1,num2;
+    String operator;
 
 
 
@@ -42,8 +43,9 @@ public class SecondActivity extends AppCompatActivity {
             public void onClick(View view) {
                 num1=Integer.parseInt(txtNumber1.getText().toString());
                 num2=Integer.parseInt(txtNumber2.getText().toString());
+                operator="+";
                 result=num1+num2;
-                textView.setText(String.valueOf(result));
+                textView.setText(txtNumber1.getText().toString()+ " " +operator+ " "+txtNumber2.getText().toString()+"=" +String.valueOf(result));
             }
         });
         btnSub.setOnClickListener(new View.OnClickListener() {
@@ -52,7 +54,9 @@ public class SecondActivity extends AppCompatActivity {
                 num1=Integer.parseInt(txtNumber1.getText().toString());
                 num2=Integer.parseInt(txtNumber2.getText().toString());
                 result=num1-num2;
-                textView.setText(String.valueOf(result));
+                operator="-";
+                textView.setText(txtNumber1.getText().toString()+ " "+operator+" "+txtNumber2.getText().toString()+"=" +String.valueOf(result));
+
             }
         });
         btnMulti.setOnClickListener(new View.OnClickListener() {
@@ -61,7 +65,9 @@ public class SecondActivity extends AppCompatActivity {
                 num1=Integer.parseInt(txtNumber1.getText().toString());
                 num2=Integer.parseInt(txtNumber2.getText().toString());
                 result=num1*num2;
-                textView.setText(String.valueOf(result));
+                operator="*";
+                textView.setText(txtNumber1.getText().toString()+ " "+operator+" "+txtNumber2.getText().toString()+"=" +String.valueOf(result));
+
             }
         });
         btnDevi.setOnClickListener(new View.OnClickListener() {
@@ -70,7 +76,9 @@ public class SecondActivity extends AppCompatActivity {
                 num1=Integer.parseInt(txtNumber1.getText().toString());
                 num2=Integer.parseInt(txtNumber2.getText().toString());
                 result=num1/num2;
-                textView.setText(String.valueOf(result));
+                operator="/";
+                textView.setText(txtNumber1.getText().toString()+ " "+operator+" "+txtNumber2.getText().toString()+"=" +String.valueOf(result));
+
             }
         });
 
